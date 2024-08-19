@@ -1,0 +1,266 @@
+<script>
+	window.addEventListener( "scroll" , function() {
+
+ let banner =	document.querySelector(".element-animation").classList.toggle("show", this.pageYOffset > 4000);
+ 
+ 
+ if (banner || false) {
+     document.querySelector(".element-animation").classList.toggle("unshow", this.pageYOffset > 6000);
+ } 
+
+})
+
+</script>
+
+<style>
+
+
+     
+     .element-animation{
+   position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 330px;
+    height: 313px;
+    background-color: #fff;
+    z-index: -1004;
+    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.2);
+    opacity: 0;
+    transform: translateY(20px);
+    
+  }
+  
+  .element-animation.show {
+  z-index: 1004;
+  opacity: 1;
+  transition: all 1.5s;
+  transform: translateY(0%);
+  
+}
+  .element-animation.unshow {
+  z-index: -1004;
+  opacity: 0;
+  transition: all 1.5s;
+  transform: translateY(0%);
+  
+}
+
+  
+
+      .bt {
+      /*position: absolute;*/
+    /*top: 55px;*/
+    /*left: 50px;*/
+    display: flex;
+    margin-left: 20px;
+    margin-top: 15px;
+    color: black;
+    font-size: 20px;
+    font-family:  'CirceRounded', Arial, sans-serif;
+  }
+    .bt_block {
+      /*position: absolute;*/
+    /*top: 55px;*/
+    /*left: 50px;*/
+    display: none;
+    margin-left: 28px;
+    margin-top: 17px;
+    color: black;
+    font-size: 20px;
+    font-family:  'CirceRounded', Arial, sans-serif;
+  }
+  
+  .vid_head {
+      width: 100%
+  }
+  
+  .img_kamin {
+      display: flex;
+      font-size: 18px;
+      margin-top: 17px;
+  }
+  
+  .kamin_text {
+      font-family: 'CirceRounded', Arial, sans-serif;
+      font-weight: lighter;
+      margin-left: 20px;
+      margin-right: 10px;
+       margin-bottom: 15px;
+  }
+  
+  .kamin_button {
+   display: flex;
+   justify-content: space-between;
+   margin-top: 35px;
+  }
+  
+  .podrobnee {
+      background-color: #f99f25;
+      border: 0;
+      padding-right: 8px;
+      padding-left: 8px;
+      margin-left: 20px;
+      color: #fff;
+  }
+  
+  .kamin_img {
+      height: 24px;
+      margin-right: 20px;
+  }
+  
+  @media (min-width: 900px) and (max-width: 1040px) { 
+     .element-animation {
+         width: 180px;
+         height: 180px;
+     }
+     
+      .bt {
+         top: 38px;
+         left: 35px;
+         font-size: 15px;
+         display: none;
+      }
+      .bt_block {
+         top: 38px;
+         left: 35px;
+         font-size: 15px;
+         display: block;
+      }
+      .img_kamin {
+          display: none;
+      }
+      .kamin_button {
+          display: block;
+          margin-top: 13px;
+      }
+      
+      .podrobnee {
+          padding-right: 16px;
+          padding-left: 16px;
+          margin-left: 32px;
+          padding-bottom: 7px;
+          padding-top: 6px;
+  }
+  
+  .kamin_img {
+      height: 21px;
+      margin-top: 20px;
+      margin-left: 25px;
+  }
+  
+  }
+  @media (min-width: 630px) and (max-width: 900px) { 
+      .element-animation {
+         width: 150px;
+         height: 150px;
+     }
+     
+      .bt {
+         top: 31px;
+         left: 29px;
+         font-size: 27px;
+         display: none;
+      }
+       .bt_block {
+         margin-top: 4px;
+         font-size: 15px;
+         display: block;
+      }
+      
+       .img_kamin {
+          display: none;
+      }
+      
+       .kamin_button {
+          display: block;
+          margin-top: 6px;
+      }
+      
+       .podrobnee {
+         padding-right: 9px;
+         padding-left: 8px;
+         margin-left: 26px;
+         padding-bottom: 5px;
+         padding-top: 1px;
+  }
+  
+  .kamin_img {
+      height: 17px;
+      margin-top: 13px;
+      margin-left: 25px;
+  }
+     
+  }
+  
+  @media (min-width: 350px) and (max-width: 630px) { 
+  .element-animation {
+         width: 108px;
+         height: 108px;
+     }
+     
+      .bt {
+         top: 24px;
+         left: 22px;
+         font-size: 20px;
+         display: none;
+      }
+       .bt_block {
+         margin-top: 4px;
+         font-size: 15px;
+         display: none;
+      }
+      .img_kamin {
+          display: none;
+      }
+      
+       .kamin_button {
+          display: block;
+          margin-top: 38px;
+      }
+      
+       .podrobnee {
+         padding-right: 9px;
+         padding-left: 8px;
+         margin-left: 10px;
+         padding-bottom: 5px;
+         padding-top: 1px;
+         font-size: 14px;
+  }
+  
+  .kamin_img {
+      height: 15px;
+      margin-top: -113px;
+      margin-left: 10px;
+  }
+  
+  .element-animation {
+      display: none;
+  }
+      
+  }
+     
+     
+  </style>
+  
+  
+  <div class="element-animation">
+      <img class="vid_head" src="https://static.tildacdn.com/tild3263-3161-4130-b461-306637333538/vid_1.png">
+      <div class="bt text-black">Нужна надежная чугунная печь?</div>
+      <div class="bt_block text-black">Печи PROMETALL</div>
+      <div class="img_kamin">
+          <img src="https://static.tildacdn.com/tild3935-3433-4430-a465-613034326134/1.png">
+          <img src="https://static.tildacdn.com/tild3864-3665-4335-a439-353232626334/2.png">
+          <img src="https://static.tildacdn.com/tild6165-3036-4665-b438-613664626332/3.png">
+      </div>
+<!--      <div class="kamin_text">Завод «ПроМеталл» предлагает вам -->
+<!--широчайший ассортимент печей и каминов -->
+<!--от российского производителя. </div>-->
+<div class="kamin_button">
+<a href="https://prometall.ru/" target="blank" class="podrobnee text-white">Подробнее</a>    
+<img class="kamin_img" src="https://static.tildacdn.com/tild3231-3837-4236-b939-616634353762/__.jpg">
+</div>
+  </div>
+  
+  
+  
+  
